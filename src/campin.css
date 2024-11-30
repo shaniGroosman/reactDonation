@@ -1,0 +1,110 @@
+.campaign-status {
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: right;
+    background-color: #ffffff;
+    margin-top: 20px;
+    background-image: url('./assets/boy.jpg');
+    background-repeat: no-repeat; /* תמונה לא תחזור על עצמה */
+
+}
+
+/* המיכל של פס ההתקדמות */
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* גובה הפס */
+    margin: 0 auto;
+    /* למרכז את ה-progress bar */
+    background-color: #ddd;
+    /* רקע בהיר לפס */
+    border-radius: 25px;
+    /* פינות מעוגלות לפס */
+    /* overflow: hidden;  */
+    /* לא לאפשר לפס לצאת מהקווים */
+}
+
+/* פס ההתקדמות עצמו */
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #ddd;
+    /* רקע בהיר לפס */
+    border-radius: 10px;
+    /* פינות מעוגלות לפס */
+}
+
+/* החלק שממלא את הפס */
+.progress-bar-fill {
+    height: 100%;
+    background-color: orange;
+    /* צבע כתום */
+    border-radius: 10px;
+    /* פינות מעוגלות גם לחלק שממלא את הפס */
+    width: 0%;
+    /* מתחיל מ-0% */
+    transition: width 3s ease;
+    /* אנימציה שתמלא את הפס */
+}
+
+/* עיגול שזז על הפס */
+.range-thumb {
+    position: absolute;
+    top: -10px;
+    /* מיקום העיגול מעל הפס, לא בתוכו */
+    width: 70px;
+    /* גודל העיגול (הגדל אותו) */
+    height: 70px;
+    background-color: orange;
+    /* צבע העיגול */
+    border-radius: 50%;
+    /* להפוך את העיגול לכדור */
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: left 3s ease;
+    /* אפקט זוזה חלקה */
+    border: 1px solid white;
+    /* הוסף גבול לבן לעיגול */
+}
+
+/* טקסט עבור אחוז התרומות */
+.range-info {
+    margin-top: 15px;
+    align-items: center;
+}
+
+.campaign-details h4 {
+    font-size: 50px;
+    margin-right: 30px;
+    color:  rgb(255, 255, 255);
+   font-weight: bold;
+}
+
+.orangeSpavm {
+    color: orange;
+    font-size: 40px;
+
+}
+
+/* .donnerImg {
+    display: flex;
+    align-items: center; /* מיישר את התמונה והטקסט במרכז באופן אנכי */
+/* justify-content: flex-start; */
+/* ממקם את התמונה בצד שמאל והטקסט בצד ימין */
+/* gap: 20px; */
+/* מוסיף רווח בין התמונה לטקסט */
+/* } */
+
+/* .donnerImg img {
+    width: 50%; /* גודל התמונה */
+/* object-fit: cover; /* אם רוצים שהתמונה תכסה את המקום בלי לפגוע ביחס הגודל שלה */
+
+/* .donnerImg div {
+    display: flex;
+    flex-direction: column; /* מציב את הטקסט בצורה אנכית  */

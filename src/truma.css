@@ -1,0 +1,127 @@
+/* Layout for the amount selection */
+.amount-options {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    /* מפזר את ה-divים באופן שווה */
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    /* מרווח מתחת לאופציות */
+    flex-wrap: wrap;
+    /* מאפשר לשים את ה-divים בשורות אם המסך קטן */
+}
+
+.amount-div {
+    width: 250px;
+    /* רוחב קבוע לכל div */
+    height: 200px;
+    /* גובה קבוע */
+    display: flex;
+    flex-direction: column;
+    /* מציב את התמונה והטקסט בצורה אנכית */
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s ease;
+    /* אנימציה קטנה בהעברה */
+}
+
+.amount-div:hover {
+    transform: scale(1.05);
+    /* הגדלת ה-div כאשר מרחפים עליו */
+}
+
+.amount-img {
+    width: 60%;
+    /* תורם להתאמה */
+    height: auto;
+    border-radius: 8px;
+    /* פינות מעוגלות לתמונה */
+}
+
+.textAmount {
+    margin-top: 10px;
+    color: rgb(253, 157, 47);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.monoyAmount {
+    margin-top: 10px;
+    color: rgb(253, 157, 47);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.someAmount {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+
+}
+
+/* Form styling */
+
+.formTruma {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    /* רוחב מקסימלי לטופס */
+    margin: 0 auto;
+    /* ממרכז את הטופס */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* צבע רקע לטופס */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* הוספת צל לטופס */
+    margin-top: 80px;
+
+}
+
+.formTruma label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.formTruma input,
+.formTruma select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    /* ה-input ייקח 100% מהרוחב של הקונטיינר */
+    box-sizing: border-box;
+    /* כלול את ה-padding בתוך ה-width */
+}
+
+.formTruma input[type="submit"] {
+    background-color: rgb(253, 157, 47);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formTruma input[type="submit"]:hover {
+    background-color: rgb(246, 131, 0);
+    /* צבע כהה בזמן מעבר על הכפתור */
+}
+
+.formTruma div {
+    /* background-color: rgb(253, 157, 47); */
+    color: rgb(255, 1, 1);
+}
+
+/* padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    

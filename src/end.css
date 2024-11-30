@@ -1,0 +1,16 @@
+/* עיצוב הכלי הכללי */
+.rating-container {
+    display: flex; /* מאפשר יישור באמצע */
+    flex-direction: column; /* הופך את התוכן לעמוד */
+    align-items: center; /* מיישר את כל התוכן באמצע */
+    justify-content: center; /* מיישר גם לגובה */
+    height: 20vh; /* לוקח את כל הגובה של המסך */
+    direction: ltr; /* מיישם כיוון מימין לשמאל */
+}
+
+/* כותרת הדירוג */
+.rating-container h4 {
+    font-size: 24px;
+    color: #333; /* אפשר לשנות את הצבע */
+    margin-bottom: 20px; /* רווח בין הכותרת לדירוג */
+}

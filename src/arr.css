@@ -1,0 +1,201 @@
+/* עיצוב הכללי של ה-container */
+.arr-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* ממקם את הכרטיסים במרכז */
+  gap: 20px;
+  /* רווח בין הכרטיסים */
+  padding: 20px;
+  /* ריפוד פנימי */
+  margin-top: 50px;
+}
+
+/* עיצוב כרטיס התרומה */
+.donation-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  /* רוחב קבוע לכרטיס */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  /* רווח בין כרטיסים */
+}
+
+/* כאשר העכבר על הכרטיס */
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* העיגול עם הלב על גבי הכרטיס */
+.donation-card .icon-container {
+  position: absolute;
+  top: -20px;
+  /* המיקום של העיגול מעל הכרטיס */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 30px;
+  /* גודל העיגול */
+  display: flex;
+  flex-direction: column;
+  /* הצגת האייקונים אחד מעל לשני */
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+  /* height: 60px; */
+  /* גובה קבוע כדי לאפשר לאייקונים להיות אחד מעל לשני */
+}
+
+/* האייקונים בתוך ה-container */
+.donation-card .heart-icon,
+.donation-card .hands-icon {
+  position: absolute;
+  font-size: 25px;
+  transition: opacity 0.3s ease;
+}
+
+/* מיקום הלב */
+.donation-card .heart-icon {
+  /* top: 50%; */
+  /* הלב יהיה במקום העליון */
+  color: rgb(253, 157, 47);
+  /* צבע הלב */
+  opacity: 1;
+  /* הלב מוצג בברירת מחדל */
+}
+
+/* מיקום הידיים */
+.donation-card .hands-icon {
+  /* top: 50%; */
+  /* הידיים יהיו במיקום התחתון */
+  color: rgb(255, 255, 255);
+  /* צבע הידיים */
+  opacity: 0;
+  /* הידיים מוסתרות בברירת מחדל */
+}
+
+/* כאשר העכבר על העיגול, הלב יהפוך לידיים מודות */
+.donation-card:hover .icon-container .heart-icon {
+  opacity: 0;
+  /* מסתיר את הלב */
+}
+
+.donation-card:hover .icon-container .hands-icon {
+  opacity: 1;
+
+  /* מראה את הידיים */
+}
+
+/* כאשר העכבר נמצא מעל הכרטיס, המלבן עם "תנו שכוייח!" יופיע */
+.donation-card:hover .thank-you-text {
+  opacity: 1;
+  transform: translateY(-10px);
+  opacity: 1;
+  /* transform: translateY(-20px);  */
+  /* הזזת הטקסט מלמטה למעלה */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+/* הכיתוב "תנו שכוייח!" מעל העיגול */
+.donation-card .thank-you-text {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  /* תנועה מלמטה למעלה */
+  background-color: rgb(255, 255, 255);
+  /* צבע רקע של המלבן */
+  color: rgb(253, 157, 47);
+  border: 2px solid rgb(253, 157, 47);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bolder;
+  white-space: nowrap;
+  /* ימנע שורות */
+  opacity: 0;
+  /* מוסתר בברירת מחדל */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* כאשר העכבר לא נמצא מעל הכרטיס, המלבן יסתיר את עצמו */
+.donation-card .thank-you-text {
+  opacity: 0;
+}
+
+/* יצירת רווחים בתוך הכרטיסים */
+
+.donation-dedication,
+.donation-time ,
+.click-count{
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(11, 44, 152);
+}
+
+.donation-amount {
+  margin-bottom: 20px;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(11, 44, 152);
+
+}
+
+/* כותרת שם התורם */
+.donation-header {
+  font-size: 30px;
+  color: rgb(11, 44, 152);
+
+  font-weight: bolder;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* העיגול עם הלב שיהפוך לאדום עם ידיים מודות */
+.donation-card:hover .icon-container {
+  background-color: rgb(253, 157, 47);
+  /* צבע הרקע של העיגול לכתום */
+  border: 2px solid rgb(253, 157, 47);
+  /* גבול כתום */
+}
+
+/* עיצוב עבור כרטיסים במספר עמודות */
+.arr-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* מרווח שווה בין כרטיסים */
+  gap: 15px;
+  /* רווח קטן בין הכרטיסים */
+  padding: 20px;
+}
+
+.donation-card {
+  width: 22%;
+  /* כל כרטיס יקבל רוחב של 30% */
+  box-sizing: border-box;
+}
+
+.icon {
+  color:rgb(253, 157, 47);
+  margin-left: 10px;
+  font-size: 25px;
+/* align-items: center; */
+}
+
+.donation-card .icon-container {
+  cursor: pointer;
+}

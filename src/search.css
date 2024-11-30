@@ -1,0 +1,59 @@
+/* עיצוב הכללי עבור הקונטיינר של החיפוש */
+.search-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px; /* רווח למטה כדי שלא יהיה צמוד */
+    padding: 20px;
+    background-color: #fff; /* רקע לבן כדי להפריד מהכרטיסים */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); הצללה עדינה */
+  }
+  
+  /* עיצוב תיבת החיפוש */
+  .search-container input {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid rgb(11, 44, 152); /* גבול כחול */
+    border-radius: 8px;
+    outline: none;
+    width: 20%;
+    /* גודל תיבה דינמי */
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255); /* צבע רקע כתום */
+    color: rgb(0, 0, 0); /* צבע טקסט כהה */
+    transition: all 0.3s ease;
+  }
+  
+  /* כשמניחים את העכבר על תיבת החיפוש */
+  .search-container input:focus {
+    border-color: rgb(11, 44, 152); /* שמירה על צבע הגבול הכחול */
+    box-shadow: 0 0 8px rgba(11, 44, 152, 0.5); /* הצללה כחולה */
+  }
+  
+  /* עיצוב עבור תיבת ה-select */
+  .search-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(11, 44, 152); /* גבול כחול */
+    border-radius: 8px;
+    outline: none;
+    /* background-color: rgb(253, 157, 47); צבע רקע כתום */
+    color: rgb(0, 0, 0); /* צבע טקסט כהה */
+    transition: all 0.3s ease;
+  }
+  
+  /* כשמניחים את העכבר על תיבת ה-select */
+  .search-container select:focus {
+    border-color: rgb(11, 44, 152);
+    box-shadow: 0 0 8px rgba(11, 44, 152, 0.5);
+  }
+  
+  /* עיצוב תווית עבור המיון */
+  .search-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(11, 44, 152); /* צבע כחול כהה */
+  }
+  
